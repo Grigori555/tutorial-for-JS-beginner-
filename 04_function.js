@@ -70,12 +70,12 @@
 
  // Замыкания
 
- function createDog(name){
-     return function(lastName){
-         console.log(` Собака сейчас ${name}, ` + `умершая собака ${lastName}`);
-     }
- }
+//  function createDog(name){
+//      return function(lastName){
+//          console.log(` Собака сейчас ${name}, ` + `умершая собака ${lastName}`);
+//      }
+//  }
 
-const logWithLastName =createDog("Panda");
-console.log(logWithLastName("Laima"));
-console.log(logWithLastName("Belka"));
+// const logWithLastName =createDog("Panda");
+// console.log(logWithLastName("Laima"));
+// console.log(logWithLastName("Belka"));
