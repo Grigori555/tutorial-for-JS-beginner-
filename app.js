@@ -1,7 +1,7 @@
 const cars  = ["Мазда", "Форд", "БМВ","Мерседес"];
 const fib= [1,2,3,5,8,13];
 const people =[
-    {name: 'Grisha', budget:20000},
+    {name: 'Grishas', budget:20000},
     {name: 'Dima', budget:45000},
     {name: 'Vano', budget:17000},
     {name: 'Elena', budget:15000},
@@ -51,31 +51,54 @@ function addItemToEnd(){
 //   return person.name === "Grisha";
 // })
 
+// console.log(person);
+
 
 
 // еще один способ поиска фильтр
 // console.log(person);  // сразу выдает результат поиска
-let findedPerson;
-for (const person of people){
+// let findedPerson;
+// for (const person of people){
 
- if(person.budget===20000){
-  findedPerson =person;
+//  if(person.budget===20000){
+//   findedPerson =person;
 
- } 
- }
+//  } 
+//  }
  
 //  console.log(findedPerson); 
   
-// упрощение
- const person = people.find((person)=>{
-   return person.budget === 15000;
- })
+// упрощение фильтра
+//  const person = people.find((person)=>{
+//    return person.budget === 15000;
+//  })
+
+ 
+//  eще упрощение фильтра
+// const person = people.find(person=>person.budget === 15000;)
+//  console.log(person);
+
+// console.log(cars.includes("Мазда")); // включает ли массив соответсвующий элемент
 
 
- console.log(person);
+
+// метод map всегда возвращает новый массив
+const upperCaseCars = cars.map(car=>{
+  return car.toUpperCase()
+})
+
+// возведение в квадрат
+const pow = fib.map(car=>{
+  return car = Math.pow(car,2)
+})
+
+console.log(pow);
 
 
+// еще одно возведение в квадрат
+const pow2 = fib.map(car=>car**2)
 
+console.log(pow2);
 
 
 
