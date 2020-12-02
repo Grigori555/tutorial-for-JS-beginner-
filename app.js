@@ -3,7 +3,9 @@ const fib= [1,2,3,5,8,13];
 const people =[
     {name: 'Grisha', budget:20000},
     {name: 'Dima', budget:45000},
-    {name: 'Vano', budget:17000}
+    {name: 'Vano', budget:17000},
+    {name: 'Elena', budget:15000},
+    {name: 'Katya', budget:37000}
 
 ]
 
@@ -30,14 +32,51 @@ function addItemToEnd(){
 // console.log(cars.reverse());  // перевернуть массив
 // const text = "Привет, мы изучаем JavaScript";
 // const reverseText= text.split("").reverse().join(" ");
+
+
+//  Методы поиска в массиве объектов
+// способы сложнее
 // const index = cars.indexOf("БМВ")  // поиск элемента в массиве
 // cars[index] = "Porche";
 // console.log(cars);
-const index = people.findIndex(function(person){
-  return person.budget === 45000;
-})  // поиск эемента при работе с объектами (этот findIndex метод является циклом)
+// const index = people.findIndex(function(person){
+//   return person.budget === 45000;// выдает номер массива
+// })  // поиск эемента при работе с объектами (этот findIndex метод является циклом)
+// // сразу выдает результат поиска
+// console.log(people[index]);
 
-console.log(people[index]);
+
+// простой способ
+// const person = people.find(function(person){
+//   return person.name === "Grisha";
+// })
+
+
+
+// еще один способ поиска фильтр
+// console.log(person);  // сразу выдает результат поиска
+let findedPerson;
+for (const person of people){
+
+ if(person.budget===20000){
+  findedPerson =person;
+
+ } 
+ }
+ 
+//  console.log(findedPerson); 
+  
+// упрощение
+ const person = people.find((person)=>{
+   return person.budget === 15000;
+ })
+
+
+ console.log(person);
+
+
+
+
 
 
 
